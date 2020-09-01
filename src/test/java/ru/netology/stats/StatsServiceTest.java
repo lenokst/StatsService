@@ -1,4 +1,5 @@
 package ru.netology.stats;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -29,7 +30,7 @@ class StatsServiceTest {
     void calculateMaxSales() {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
-        int expected = 5;
+        int expected = 7;
 
         int actual = service.calculateMaxSales(sales);
         assertEquals(expected, actual);
