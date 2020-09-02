@@ -10,10 +10,7 @@ public class StatsService {
     }
 
     public int calculateAverageAmountSales(int[] sales) {
-        int sum = 0;
-        for (int sale : sales) {
-            sum += sale;
-        }
+        int sum = calculateTotal(sales);
         int amount = sum / sales.length;
         return amount;
     }
@@ -36,7 +33,7 @@ public class StatsService {
         int indexMin = 0;
         for (int i = 0; i < sales.length; i++) {
             int sale = sales[i];
-            if (currentMin > sale) {
+            if (currentMin >= sale) {
                 currentMin = sale;
                 indexMin = i;
             }
